@@ -1,0 +1,38 @@
+{
+  "name": "mern",
+  "private": true,
+  "version": "1.0.0",
+  "description": "explore mern",
+  "main": "server.js",
+  "scripts": {
+    "copy": "cpx src/static/* dist/public/ --watch",
+    "compile-server": "babel src/server --out-dir dist/server --watch",
+    "compile-client": "babel src/client --out-dir dist/client --watch",
+    "compile": "babel src --out-dir dist --watch",
+    "pack": "webpack --config webpack.config.js --watch",
+    "start": "nodemon dist/server/server.bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "me",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.1",
+    "helmet": "^3.8.2",
+    "mongodb": "^2.2.31",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-router-dom": "^4.2.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-minify": "^0.2.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-minify": "^0.2.0",
+    "babel-preset-react": "^6.24.1",
+    "cpx": "^1.5.0",
+    "webpack": "^3.6.0",
+    "webpack-node-externals": "^1.6.0"
+  }
+}
